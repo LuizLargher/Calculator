@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    & .container {
+        font-family: "Ubuntu", sans-serif;
+
+        & header {
+            & h1 {
+                text-align: left;
+                color: rgb(0, 0, 0);
+                font-size: 24px;
+            }
+        }
+
+        & main {
+            & .calculator {
+                width: 40%;
+                background-color: rgb(60, 60, 60);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & #display {
+                    background-color: white;
+                    width: 53%;
+                    height: 4rem;
+                    text-align: right;
+                    font-size: 2rem;
+                    margin: 2rem 1rem 1rem 1rem;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    border: none;
+                }
+
+                & .buttons {
+                    width: 60%;
+                    margin: 0.5rem 0rem 1rem 0rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 0.3rem;
+
+                    & #btnZero,
+                    #btnOne,
+                    #btnTwo,
+                    #btnThree,
+                    #btnFour,
+                    #btnFive,
+                    #btnSix,
+                    #btnSeven,
+                    #btnEight,
+                    #btnNine {
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: 2rem;
+                        text-align: center;
+                        padding: 2rem;
+                        max-width: 5rem;
+                        max-height: 6rem;
+                        min-width: 5rem;
+                        min-height: 6rem;
+                        border-style: none;
+                        border-radius: 10px;
+                        
+                        &:hover {
+                            cursor: pointer;
+                            border: none;
+                            background-color: rgba(58, 58, 144, 0.5);
+                            color: rgb(205, 205, 205);
+                            transform: translateY(-2px);
+                            transition: 1ms ease-in-out;
+                        }
+                    }
+
+                    & #btnPorcentage,
+                    #btnRadic,
+                    #btnPotence,
+                    #btnDivide,
+                    #btnSubtract,
+                    #btnSum,
+                    #btnMultiply,
+                    #btnEqual,
+                    #btnFloat,
+                    #btnClear {
+                        background-color: rgb(33, 33, 33);
+                        color: rgb(171, 171, 171);
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: 2rem;
+                        text-align: center;
+                        padding: 2rem;
+                        max-width: 5rem;
+                        max-height: 6rem;
+                        min-width: 5rem;
+                        min-height: 6rem;
+                        border-style: none;
+                        border-radius: 10px;
+
+                        &:hover {
+                            cursor: pointer;
+                            border: none;
+                            background-color: rgba(44, 44, 44, 0.5);
+                            color: rgb(205, 205, 205);
+                            transform: translateY(-2px);
+                            transition: 1ms ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
