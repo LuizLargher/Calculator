@@ -22,13 +22,9 @@ const btnFloat = document.getElementById('btnFloat');
 
 const display = document.getElementById('display');
 
-const resultado = [];
+let disp = [1,2,3,4,5];
 
-resultado.appendChild(display);
-
-console.log(resultado);
-
-numOne.addEventListener('click', () => display.textContent += '1');
+numOne.addEventListener('click', () => display.textContent += '1' && disp.push(1));
 numTwo.addEventListener('click', () => display.textContent += '2');
 numThree.addEventListener('click', () => display.textContent += '3');
 numFour.addEventListener('click', () => display.textContent += '4');
@@ -48,6 +44,12 @@ btnRadic.addEventListener('click', () => display.textContent += '√');
 btnPorcentage.addEventListener('click', () => display.textContent += '%');
 btnClear.addEventListener('click', () => display.textContent = '');
 btnFloat.addEventListener('click', () => display.textContent += '.');
+btnEqual.addEventListener('click', () => display.textContent = eval(display.textContent));
 
-
-
+function somarNumeros(a){
+    let soma = 0;
+    for (let i = 0; i < a.length; i++) {
+        soma += a[i];
+    }
+    return soma;
+}

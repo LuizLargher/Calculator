@@ -7,40 +7,56 @@
 }
 
 body {
-    & .container {
+    .container {
         font-family: "Ubuntu", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        & header {
-            & h1 {
+
+        header {
+            margin: 2rem 1rem 1rem 1rem;
+
+            h1 {
                 text-align: left;
                 color: rgb(0, 0, 0);
                 font-size: 24px;
             }
         }
 
-        & main {
-            & .calculator {
-                width: 40%;
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0rem 1rem 0rem;
+
+            .calculator {
+                width: 25%;
                 background-color: rgb(60, 60, 60);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                border-radius: 2rem;
 
-                & #display {
+
+                #display {
                     background-color: white;
-                    width: 53%;
+                    width: 85%;
                     height: 4rem;
                     text-align: right;
                     font-size: 2rem;
                     margin: 2rem 1rem 1rem 1rem;
-                    padding: 1rem;
+                    padding: 0.8rem 2rem 0.8rem 0rem;
                     border-radius: 10px;
                     border: none;
                 }
 
-                & .buttons {
-                    width: 60%;
+
+                .buttons {
+                    width: 100%;
                     margin: 0.5rem 0rem 1rem 0rem;
                     display: flex;
                     justify-content: center;
@@ -48,7 +64,8 @@ body {
                     flex-wrap: wrap;
                     gap: 0.3rem;
 
-                    & #btnZero,
+
+                    #btnZero,
                     #btnOne,
                     #btnTwo,
                     #btnThree,
@@ -68,7 +85,7 @@ body {
                         min-height: 6rem;
                         border-style: none;
                         border-radius: 10px;
-                        
+
                         &:hover {
                             cursor: pointer;
                             border: none;
@@ -79,7 +96,8 @@ body {
                         }
                     }
 
-                    & #btnPorcentage,
+
+                    #btnPorcentage,
                     #btnRadic,
                     #btnPotence,
                     #btnDivide,
@@ -111,6 +129,7 @@ body {
                             transition: 1ms ease-in-out;
                         }
                     }
+
                 }
             }
         }
